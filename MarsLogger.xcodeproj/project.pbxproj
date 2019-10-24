@@ -157,10 +157,10 @@
 		6F90DDD91395CAAA00125BDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F90DDDB1395CAAA00125BDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F90DDDD1395CAAA00125BDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6F90DDE11395CAAA00125BDA /* RosyWriter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RosyWriter-Info.plist"; path = "../RosyWriter-Info.plist"; sourceTree = "<group>"; };
+		6F90DDE11395CAAA00125BDA /* MarsLogger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MarsLogger-Info.plist"; path = "../MarsLogger-Info.plist"; sourceTree = "<group>"; };
 		6F90DDE31395CAAA00125BDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F90DDE51395CAAA00125BDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = main.m; path = ../main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		6F90DDE71395CAAA00125BDA /* RosyWriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RosyWriter-Prefix.pch"; path = "../RosyWriter-Prefix.pch"; sourceTree = "<group>"; };
+		6F90DDE71395CAAA00125BDA /* MarsLogger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MarsLogger-Prefix.pch"; path = "../MarsLogger-Prefix.pch"; sourceTree = "<group>"; };
 		6F90DDE81395CAAA00125BDA /* RosyWriterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RosyWriterAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6F90DDE91395CAAA00125BDA /* RosyWriterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RosyWriterAppDelegate.m; sourceTree = "<group>"; };
 		6F90DDEB1395CAAA00125BDA /* RosyWriterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RosyWriterViewController.h; sourceTree = "<group>"; };
@@ -378,7 +378,7 @@
 				5DBA2A9719C232E200530F7A /* Launch.storyboard */,
 				281FB47D176694640071511D /* Main.storyboard */,
 				262D247E17177837000E1DBA /* Shaders */,
-				6F90DDE11395CAAA00125BDA /* RosyWriter-Info.plist */,
+				6F90DDE11395CAAA00125BDA /* MarsLogger-Info.plist */,
 				6F90DDE21395CAAA00125BDA /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -417,7 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				6F90DDE51395CAAA00125BDA /* main.m */,
-				6F90DDE71395CAAA00125BDA /* RosyWriter-Prefix.pch */,
+				6F90DDE71395CAAA00125BDA /* MarsLogger-Prefix.pch */,
 			);
 			name = "Other Sources";
 			path = Classes;
@@ -426,9 +426,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1756C9D419BE5E1F0080DD55 /* RosyWriterCIFilter */ = {
+		1756C9D419BE5E1F0080DD55 /* MarsLoggerCIFilter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1756C9F619BE5E1F0080DD55 /* Build configuration list for PBXNativeTarget "RosyWriterCIFilter" */;
+			buildConfigurationList = 1756C9F619BE5E1F0080DD55 /* Build configuration list for PBXNativeTarget "MarsLoggerCIFilter" */;
 			buildPhases = (
 				1756C9D519BE5E1F0080DD55 /* Sources */,
 				1756C9E119BE5E1F0080DD55 /* Frameworks */,
@@ -438,14 +438,14 @@
 			);
 			dependencies = (
 			);
-			name = RosyWriterCIFilter;
+			name = MarsLoggerCIFilter;
 			productName = RosyWriter;
 			productReference = 1756C9F919BE5E1F0080DD55 /* MarsLoggerCIFilter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1FCCE64619BA80A5009D7A6B /* RosyWriterCPU */ = {
+		1FCCE64619BA80A5009D7A6B /* MarsLoggerCPU */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FCCE66A19BA80A5009D7A6B /* Build configuration list for PBXNativeTarget "RosyWriterCPU" */;
+			buildConfigurationList = 1FCCE66A19BA80A5009D7A6B /* Build configuration list for PBXNativeTarget "MarsLoggerCPU" */;
 			buildPhases = (
 				1FCCE64719BA80A5009D7A6B /* Sources */,
 				1FCCE65319BA80A5009D7A6B /* Frameworks */,
@@ -455,14 +455,14 @@
 			);
 			dependencies = (
 			);
-			name = RosyWriterCPU;
+			name = MarsLoggerCPU;
 			productName = RosyWriter;
 			productReference = 1FCCE66D19BA80A5009D7A6B /* MarsLoggerCPU.app */;
 			productType = "com.apple.product-type.application";
 		};
-		696D280919CA539900A23D81 /* RosyWriterOpenCV */ = {
+		696D280919CA539900A23D81 /* MarsLoggerOpenCV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 696D282619CA539900A23D81 /* Build configuration list for PBXNativeTarget "RosyWriterOpenCV" */;
+			buildConfigurationList = 696D282619CA539900A23D81 /* Build configuration list for PBXNativeTarget "MarsLoggerOpenCV" */;
 			buildPhases = (
 				696D280A19CA539900A23D81 /* Sources */,
 				696D281319CA539900A23D81 /* Frameworks */,
@@ -472,14 +472,14 @@
 			);
 			dependencies = (
 			);
-			name = RosyWriterOpenCV;
+			name = MarsLoggerOpenCV;
 			productName = RosyWriter;
 			productReference = 696D282919CA539900A23D81 /* MarsLoggerOpenCV.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6F90DDD41395CAAA00125BDA /* RosyWriterOpenGL */ = {
+		6F90DDD41395CAAA00125BDA /* MarsLoggerOpenGL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F90DDF71395CAAA00125BDA /* Build configuration list for PBXNativeTarget "RosyWriterOpenGL" */;
+			buildConfigurationList = 6F90DDF71395CAAA00125BDA /* Build configuration list for PBXNativeTarget "MarsLoggerOpenGL" */;
 			buildPhases = (
 				6F90DDD11395CAAA00125BDA /* Sources */,
 				6F90DDD21395CAAA00125BDA /* Frameworks */,
@@ -489,7 +489,7 @@
 			);
 			dependencies = (
 			);
-			name = RosyWriterOpenGL;
+			name = MarsLoggerOpenGL;
 			productName = RosyWriter;
 			productReference = 6F90DDD51395CAAA00125BDA /* MarsLoggerOpenGL.app */;
 			productType = "com.apple.product-type.application";
@@ -520,7 +520,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "RosyWriter" */;
+			buildConfigurationList = 6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "MarsLogger" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -532,10 +532,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6F90DDD41395CAAA00125BDA /* RosyWriterOpenGL */,
-				1FCCE64619BA80A5009D7A6B /* RosyWriterCPU */,
-				1756C9D419BE5E1F0080DD55 /* RosyWriterCIFilter */,
-				696D280919CA539900A23D81 /* RosyWriterOpenCV */,
+				6F90DDD41395CAAA00125BDA /* MarsLoggerOpenGL */,
+				1FCCE64619BA80A5009D7A6B /* MarsLoggerCPU */,
+				1756C9D419BE5E1F0080DD55 /* MarsLoggerCIFilter */,
+				696D280919CA539900A23D81 /* MarsLoggerOpenCV */,
 			);
 		};
 /* End PBXProject section */
@@ -715,8 +715,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UP5VEV273B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CIFILTER_RENDERER=1";
@@ -737,8 +737,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UP5VEV273B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CIFILTER_RENDERER=1";
@@ -759,8 +759,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UP5VEV273B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
@@ -781,8 +781,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UP5VEV273B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
@@ -808,8 +808,8 @@
 					"$(PROJECT_DIR)/Thirdparty",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_OPENCV_RENDERER=1";
@@ -835,8 +835,8 @@
 					"$(PROJECT_DIR)/Thirdparty",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_OPENCV_RENDERER=1";
@@ -959,8 +959,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UP5VEV273B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
@@ -980,8 +980,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UP5VEV273B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RosyWriter-Prefix.pch";
-				INFOPLIST_FILE = "RosyWriter-Info.plist";
+				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
@@ -995,7 +995,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1756C9F619BE5E1F0080DD55 /* Build configuration list for PBXNativeTarget "RosyWriterCIFilter" */ = {
+		1756C9F619BE5E1F0080DD55 /* Build configuration list for PBXNativeTarget "MarsLoggerCIFilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1756C9F719BE5E1F0080DD55 /* Debug */,
@@ -1004,7 +1004,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FCCE66A19BA80A5009D7A6B /* Build configuration list for PBXNativeTarget "RosyWriterCPU" */ = {
+		1FCCE66A19BA80A5009D7A6B /* Build configuration list for PBXNativeTarget "MarsLoggerCPU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FCCE66B19BA80A5009D7A6B /* Debug */,
@@ -1013,7 +1013,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		696D282619CA539900A23D81 /* Build configuration list for PBXNativeTarget "RosyWriterOpenCV" */ = {
+		696D282619CA539900A23D81 /* Build configuration list for PBXNativeTarget "MarsLoggerOpenCV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				696D282719CA539900A23D81 /* Debug */,
@@ -1022,7 +1022,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "RosyWriter" */ = {
+		6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "MarsLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6F90DDF51395CAAA00125BDA /* Debug */,
@@ -1031,7 +1031,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F90DDF71395CAAA00125BDA /* Build configuration list for PBXNativeTarget "RosyWriterOpenGL" */ = {
+		6F90DDF71395CAAA00125BDA /* Build configuration list for PBXNativeTarget "MarsLoggerOpenGL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6F90DDF81395CAAA00125BDA /* Debug */,
