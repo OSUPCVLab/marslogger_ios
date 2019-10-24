@@ -167,9 +167,9 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 	dispatch_sync( _sessionQueue, ^{
 		[self setupCaptureSession];
 		
-		if ( _captureSession ) {
-			[_captureSession startRunning];
-			_running = YES;
+        if ( self->_captureSession ) {
+            [self->_captureSession startRunning];
+            self->_running = YES;
 		}
 	} );
 }
@@ -177,12 +177,12 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 - (void)stopRunning
 {
 	dispatch_sync( _sessionQueue, ^{
-		_running = NO;
+        self->_running = NO;
 		
 		// the captureSessionDidStopRunning method will stop recording if necessary as well, but we do it here so that the last video and audio samples are better aligned
 		[self stopRecording]; // does nothing if we aren't currently recording
 		
-		[_captureSession stopRunning];
+        [self->_captureSession stopRunning];
 		
 		[self captureSessionDidStopRunning];
 		
@@ -374,8 +374,8 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 				NSLog( @"device not available in background" );
 
 				// Since we can't resume running while in the background we need to remember this for next time we come to the foreground
-				if ( _running ) {
-					_startCaptureSessionOnEnteringForeground = YES;
+                if ( self->_running ) {
+                    self->_startCaptureSessionOnEnteringForeground = YES;
 				}
 			}
 			else if ( error.code == AVErrorMediaServicesWereReset )
@@ -414,7 +414,7 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 	[self teardownCaptureSession];
 	
 	[self invokeDelegateCallbackAsync:^{
-		[_delegate capturePipeline:self didStopRunningWithError:error];
+        [self->_delegate capturePipeline:self didStopRunningWithError:error];
 	}];
 }
 
@@ -430,13 +430,13 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 	
 	dispatch_sync( _sessionQueue, ^{
 		
-		if ( _startCaptureSessionOnEnteringForeground )
+        if ( self->_startCaptureSessionOnEnteringForeground )
 		{
 			NSLog( @"-[%@ %@] manually restarting session", [self class], NSStringFromSelector(_cmd) );
 			
-			_startCaptureSessionOnEnteringForeground = NO;
-			if ( _running ) {
-				[_captureSession startRunning];
+            self->_startCaptureSessionOnEnteringForeground = NO;
+            if ( self->_running ) {
+                [self->_captureSession startRunning];
 			}
 		}
 	} );
@@ -483,7 +483,7 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 		}
 		
 		self.outputVideoFormatDescription = NULL;
-		[_renderer reset];
+        [self->_renderer reset];
 		self.currentPreviewPixelBuffer = NULL;
 		
 		NSLog( @"-[%@ %@] finished teardown", [self class], NSStringFromSelector(_cmd) );
@@ -519,7 +519,7 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 	// Tell the delegate so that it can flush any cached buffers.
 	
 	[self invokeDelegateCallbackAsync:^{
-		[_delegate capturePipelineDidRunOutOfPreviewBuffers:self];
+        [self->_delegate capturePipelineDidRunOutOfPreviewBuffers:self];
 	}];
 }
 
@@ -678,7 +678,7 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 		}
 		
 		if ( currentPreviewPixelBuffer ) {
-			[_delegate capturePipeline:self previewPixelBufferReadyForDisplay:currentPreviewPixelBuffer];
+            [self->_delegate capturePipeline:self previewPixelBufferReadyForDisplay:currentPreviewPixelBuffer];
 			CFRelease( currentPreviewPixelBuffer );
 		}
 	}];
@@ -781,11 +781,11 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 	[library writeVideoAtPathToSavedPhotosAlbum:_recordingURL completionBlock:^(NSURL *assetURL, NSError *error) {
         savedAssetURL = assetURL;
         
-		[[NSFileManager defaultManager] removeItemAtURL:_recordingURL error:NULL];
+        [[NSFileManager defaultManager] removeItemAtURL:self->_recordingURL error:NULL];
 		
  		@synchronized( self )
 		{
-			if ( _recordingStatus != RosyWriterRecordingStatusStoppingRecording ) {
+            if ( self->_recordingStatus != RosyWriterRecordingStatusStoppingRecording ) {
 				@throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Expected to be in StoppingRecording state" userInfo:nil];
 				return;
 			}
@@ -842,18 +842,18 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 		
 		if ( error && ( newStatus == RosyWriterRecordingStatusIdle ) )
 		{
-			delegateCallbackBlock = ^{ [_delegate capturePipeline:self recordingDidFailWithError:error]; };
+            delegateCallbackBlock = ^{ [self->_delegate capturePipeline:self recordingDidFailWithError:error]; };
 		}
 		else
 		{
 			if ( ( oldStatus == RosyWriterRecordingStatusStartingRecording ) && ( newStatus == RosyWriterRecordingStatusRecording ) ) {
-				delegateCallbackBlock = ^{ [_delegate capturePipelineRecordingDidStart:self]; };
+                delegateCallbackBlock = ^{ [self->_delegate capturePipelineRecordingDidStart:self]; };
 			}
 			else if ( ( oldStatus == RosyWriterRecordingStatusRecording ) && ( newStatus == RosyWriterRecordingStatusStoppingRecording ) ) {
-				delegateCallbackBlock = ^{ [_delegate capturePipelineRecordingWillStop:self]; };
+                delegateCallbackBlock = ^{ [self->_delegate capturePipelineRecordingWillStop:self]; };
 			}
 			else if ( ( oldStatus == RosyWriterRecordingStatusStoppingRecording ) && ( newStatus == RosyWriterRecordingStatusIdle ) ) {
-				delegateCallbackBlock = ^{ [_delegate capturePipelineRecordingDidStop:self]; };
+                delegateCallbackBlock = ^{ [self->_delegate capturePipelineRecordingDidStop:self]; };
 			}
 		}
 		
