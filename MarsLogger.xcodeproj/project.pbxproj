@@ -132,7 +132,18 @@
 		F3C8A227219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
 		F3C8A228219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
 		F3C8A229219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
+		F3FA8C4F23A39F57006CEF03 /* MarsLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA8C4E23A39F57006CEF03 /* MarsLoggerTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3FA8C5123A39F57006CEF03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F90DDCC1395CAAA00125BDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F90DDD41395CAAA00125BDA;
+			remoteInfo = MarsLoggerOpenGL;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		171999D919C7695800A719B5 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -196,6 +207,9 @@
 		F3C1A8DC22945F9200A59A8E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Thirdparty/opencv2.framework; sourceTree = "<group>"; };
 		F3C8A224219122600087B5C3 /* VideoTimeConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoTimeConverter.m; path = Utilities/VideoTimeConverter.m; sourceTree = "<group>"; };
 		F3C8A225219122600087B5C3 /* VideoTimeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoTimeConverter.h; path = Utilities/VideoTimeConverter.h; sourceTree = "<group>"; };
+		F3FA8C4C23A39F57006CEF03 /* MarsLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FA8C4E23A39F57006CEF03 /* MarsLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarsLoggerTests.m; sourceTree = "<group>"; };
+		F3FA8C5023A39F57006CEF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +292,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3FA8C4923A39F57006CEF03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -314,6 +335,7 @@
 				6FF11C8616A8778500E14D71 /* Utilities */,
 				AF052D151422BCEA00CD2D66 /* Other Sources */,
 				6F90DDE01395CAAA00125BDA /* Resources */,
+				F3FA8C4D23A39F57006CEF03 /* MarsLoggerTests */,
 				6F90DDD81395CAAA00125BDA /* Frameworks */,
 				6F90DDD61395CAAA00125BDA /* Products */,
 			);
@@ -326,6 +348,7 @@
 				1FCCE66D19BA80A5009D7A6B /* MarsLoggerCPU.app */,
 				1756C9F919BE5E1F0080DD55 /* MarsLoggerCIFilter.app */,
 				696D282919CA539900A23D81 /* MarsLoggerOpenCV.app */,
+				F3FA8C4C23A39F57006CEF03 /* MarsLoggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -423,6 +446,15 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		F3FA8C4D23A39F57006CEF03 /* MarsLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3FA8C4E23A39F57006CEF03 /* MarsLoggerTests.m */,
+				F3FA8C5023A39F57006CEF03 /* Info.plist */,
+			);
+			path = MarsLoggerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -494,6 +526,24 @@
 			productReference = 6F90DDD51395CAAA00125BDA /* MarsLogger.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F3FA8C4B23A39F57006CEF03 /* MarsLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3FA8C5523A39F57006CEF03 /* Build configuration list for PBXNativeTarget "MarsLoggerTests" */;
+			buildPhases = (
+				F3FA8C4823A39F57006CEF03 /* Sources */,
+				F3FA8C4923A39F57006CEF03 /* Frameworks */,
+				F3FA8C4A23A39F57006CEF03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3FA8C5223A39F57006CEF03 /* PBXTargetDependency */,
+			);
+			name = MarsLoggerTests;
+			productName = MarsLoggerTests;
+			productReference = F3FA8C4C23A39F57006CEF03 /* MarsLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -518,6 +568,12 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = UP5VEV273B;
 					};
+					F3FA8C4B23A39F57006CEF03 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = UP5VEV273B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6F90DDD41395CAAA00125BDA;
+					};
 				};
 			};
 			buildConfigurationList = 6F90DDCF1395CAAA00125BDA /* Build configuration list for PBXProject "MarsLogger" */;
@@ -536,6 +592,7 @@
 				1FCCE64619BA80A5009D7A6B /* MarsLoggerCPU */,
 				1756C9D419BE5E1F0080DD55 /* MarsLoggerCIFilter */,
 				696D280919CA539900A23D81 /* MarsLoggerOpenCV */,
+				F3FA8C4B23A39F57006CEF03 /* MarsLoggerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -591,6 +648,13 @@
 				262F9EB919A7CA8D001BB393 /* myFilter.fsh in Resources */,
 				28365599139FE71B00D09100 /* ReadMe.txt in Resources */,
 				7214DBCE182AEF8900EA3F99 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3FA8C4A23A39F57006CEF03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +738,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3FA8C4823A39F57006CEF03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FA8C4F23A39F57006CEF03 /* MarsLoggerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3FA8C5223A39F57006CEF03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F90DDD41395CAAA00125BDA /* MarsLoggerOpenGL */;
+			targetProxy = F3FA8C5123A39F57006CEF03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		281FB47D176694640071511D /* Main.storyboard */ = {
@@ -992,6 +1072,73 @@
 			};
 			name = Release;
 		};
+		F3FA8C5323A39F57006CEF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UP5VEV273B;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MarsLoggerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = osu.MarsLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsLogger.app/MarsLogger";
+			};
+			name = Debug;
+		};
+		F3FA8C5423A39F57006CEF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UP5VEV273B;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MarsLoggerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = osu.MarsLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsLogger.app/MarsLogger";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1036,6 +1183,15 @@
 			buildConfigurations = (
 				6F90DDF81395CAAA00125BDA /* Debug */,
 				6F90DDF91395CAAA00125BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3FA8C5523A39F57006CEF03 /* Build configuration list for PBXNativeTarget "MarsLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3FA8C5323A39F57006CEF03 /* Debug */,
+				F3FA8C5423A39F57006CEF03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
