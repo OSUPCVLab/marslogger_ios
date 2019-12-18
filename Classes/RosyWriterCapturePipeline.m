@@ -775,6 +775,8 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
     __block NSURL *savedAssetURL;
 	_recorder = nil;
 	
+    // TODO(jhuai): rewrite the below section with PHPLibrary, see
+    // https://stackoverflow.com/questions/33500266/how-to-use-phphotolibrary-like-alassetslibrary
 	ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     
     // unfortunately, the assetURL returned from the asynchronous function is often null
@@ -792,6 +794,9 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 			[self transitionToRecordingStatus:RosyWriterRecordingStatusIdle error:error];
 		}
 	}];
+    
+    // TODO(jhuai): save the video to the document directory in the app sandbox, see
+    // https://stackoverflow.com/questions/6916305/how-to-save-video-file-into-document-directory
     
     NSString *videoDataFilepath = savedAssetURL.absoluteString;
     // In older ios, _savedFrameIntrinsics can have 0 count
