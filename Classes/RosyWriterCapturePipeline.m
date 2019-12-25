@@ -772,35 +772,39 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
     NSMutableArray *savedFrameTimestamps = _recorder.savedFrameTimestamps;
     NSMutableArray *savedFrameIntrinsics = _recorder.savedFrameIntrinsics;
     NSMutableArray *savedExposureDurations = _recorder.savedExposureDurations;
-    __block NSURL *savedAssetURL;
 	_recorder = nil;
-	
-    // TODO(jhuai): rewrite the below section with PHPLibrary, see
-    // https://stackoverflow.com/questions/33500266/how-to-use-phphotolibrary-like-alassetslibrary
-	ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     
-    // unfortunately, the assetURL returned from the asynchronous function is often null
-	[library writeVideoAtPathToSavedPhotosAlbum:_recordingURL completionBlock:^(NSURL *assetURL, NSError *error) {
-        savedAssetURL = assetURL;
+    // Save to the album, see
+    // https://stackoverflow.com/questions/33500266/how-to-use-phphotolibrary-like-alassetslibrary
+    __block PHObjectPlaceholder *placeholder;
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        PHAssetChangeRequest* createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:_recordingURL];
+        placeholder = [createAssetRequest placeholderForCreatedAsset];
         
+    } completionHandler:^(BOOL success, NSError *error) {
         [[NSFileManager defaultManager] removeItemAtURL:self->_recordingURL error:NULL];
-		
- 		@synchronized( self )
-		{
+        
+        @synchronized( self )
+        {
             if ( self->_recordingStatus != RosyWriterRecordingStatusStoppingRecording ) {
-				@throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Expected to be in StoppingRecording state" userInfo:nil];
-				return;
-			}
-			[self transitionToRecordingStatus:RosyWriterRecordingStatusIdle error:error];
-		}
-	}];
+                @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Expected to be in StoppingRecording state" userInfo:nil];
+                return;
+            }
+            [self transitionToRecordingStatus:RosyWriterRecordingStatusIdle error:error];
+        }
+        if (success) {
+            NSLog(@"didFinishRecordingToOutputFileAtURL - success!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
     
     // TODO(jhuai): save the video to the document directory in the app sandbox, see
     // https://stackoverflow.com/questions/6916305/how-to-save-video-file-into-document-directory
-    
-    NSString *videoDataFilepath = savedAssetURL.absoluteString;
+    // TODO(jhuai): set portraint for iphone and landscape for iPad, see
+    // https://stackoverflow.com/questions/19223584/ipad-in-landscape-mode-and-iphone-in-portrait-mode
     // In older ios, _savedFrameIntrinsics can have 0 count
-    NSLog(@"Video at %@ of URL %@ finished recording with %lu timestamps and %lu intrinsic mats and %lu exposure durations", videoDataFilepath, savedAssetURL, (unsigned long)[savedFrameTimestamps count],
+    NSLog(@"Video finished recording with %lu timestamps and %lu intrinsic mats and %lu exposure durations", (unsigned long)[savedFrameTimestamps count],
         (unsigned long)[savedFrameIntrinsics count], (unsigned long)[savedExposureDurations count]);
     NSMutableString *mainString = [[NSMutableString alloc]initWithString:@"Timestamp[nanosec], fx[px], fy[px], cx[px], cy[px], exposure duration[nanosec]\n"];
     bool hasIntrinsics = false;
@@ -823,8 +827,7 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
     // https://www.bignerdranch.com/blog/working-with-the-files-app-in-ios-11/
     if ([settingsData writeToURL:_metadataFileURL atomically:YES]) {
         NSLog(@"Written video metadata to %@", _metadataFileURL);
-    }
-    else {
+    } else {
         NSLog(@"Failed to record video metadata to %@", _metadataFileURL);
     }
 }
