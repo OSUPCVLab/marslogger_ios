@@ -132,6 +132,9 @@
 		F3C8A227219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
 		F3C8A228219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
 		F3C8A229219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
+		F3CDB8C623D56CB900799F34 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318DFE820E738C000260914 /* Photos.framework */; };
+		F3CDB8C723D56CF600799F34 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318DFE820E738C000260914 /* Photos.framework */; };
+		F3CDB8C823D56D0000799F34 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318DFE820E738C000260914 /* Photos.framework */; };
 		F3FA8C4F23A39F57006CEF03 /* MarsLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA8C4E23A39F57006CEF03 /* MarsLoggerTests.m */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +231,7 @@
 				1756C9E919BE5E1F0080DD55 /* AssetsLibrary.framework in Frameworks */,
 				1756C9EA19BE5E1F0080DD55 /* AVFoundation.framework in Frameworks */,
 				1756C9EB19BE5E1F0080DD55 /* UIKit.framework in Frameworks */,
+				F3CDB8C723D56CF600799F34 /* Photos.framework in Frameworks */,
 				1756C9EC19BE5E1F0080DD55 /* Foundation.framework in Frameworks */,
 				171999DA19C7695800A719B5 /* CoreImage.framework in Frameworks */,
 			);
@@ -240,6 +244,7 @@
 				F3C1A8D42294588000A59A8E /* MessageUI.framework in Frameworks */,
 				F3C1A8D822945C1500A59A8E /* CoreMotion.framework in Frameworks */,
 				1FCCE65419BA80A5009D7A6B /* ImageIO.framework in Frameworks */,
+				F3CDB8C623D56CB900799F34 /* Photos.framework in Frameworks */,
 				1FCCE65619BA80A5009D7A6B /* CoreMedia.framework in Frameworks */,
 				1FCCE65719BA80A5009D7A6B /* QuartzCore.framework in Frameworks */,
 				1FCCE65819BA80A5009D7A6B /* CoreVideo.framework in Frameworks */,
@@ -267,6 +272,7 @@
 				696D281919CA539900A23D81 /* CoreGraphics.framework in Frameworks */,
 				696D281A19CA539900A23D81 /* OpenGLES.framework in Frameworks */,
 				696D281C19CA539900A23D81 /* AVFoundation.framework in Frameworks */,
+				F3CDB8C823D56D0000799F34 /* Photos.framework in Frameworks */,
 				696D281D19CA539900A23D81 /* UIKit.framework in Frameworks */,
 				696D281E19CA539900A23D81 /* Foundation.framework in Frameworks */,
 			);
@@ -554,19 +560,23 @@
 				TargetAttributes = {
 					1756C9D419BE5E1F0080DD55 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = UP5VEV273B;
+						DevelopmentTeam = UU4S8L4KDL;
+						ProvisioningStyle = Automatic;
 					};
 					1FCCE64619BA80A5009D7A6B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = UP5VEV273B;
+						DevelopmentTeam = UU4S8L4KDL;
+						ProvisioningStyle = Automatic;
 					};
 					696D280919CA539900A23D81 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = UP5VEV273B;
+						DevelopmentTeam = UU4S8L4KDL;
+						ProvisioningStyle = Automatic;
 					};
 					6F90DDD41395CAAA00125BDA = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = UP5VEV273B;
+						DevelopmentTeam = UU4S8L4KDL;
+						ProvisioningStyle = Automatic;
 					};
 					F3FA8C4B23A39F57006CEF03 = {
 						CreatedOnToolsVersion = 10.1;
@@ -794,14 +804,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CIFILTER_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilterSina;
 				PRODUCT_NAME = MarsLoggerCIFilter;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -816,14 +827,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CIFILTER_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilterSina;
 				PRODUCT_NAME = MarsLoggerCIFilter;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -838,14 +850,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPU;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPUSina;
 				PRODUCT_NAME = MarsLoggerCPU;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -860,14 +873,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPU;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPUSina;
 				PRODUCT_NAME = MarsLoggerCPU;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -882,7 +896,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -894,7 +909,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_OPENCV_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCV;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCVSina;
 				PRODUCT_NAME = MarsLoggerOpenCV;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -909,7 +924,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -921,7 +937,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_OPENCV_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCV;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCVSina;
 				PRODUCT_NAME = MarsLoggerOpenCV;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -952,8 +968,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development: jianzhuhuai0108@sina.com (5X78XFMH7J)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1006,9 +1024,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development: jianzhuhuai0108@sina.com (5X78XFMH7J)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: jianzhuhuai0108@sina.com (5X78XFMH7J)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1038,13 +1058,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLogger;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerSina;
 				PRODUCT_NAME = MarsLogger;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1059,13 +1080,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UP5VEV273B;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU4S8L4KDL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLogger;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerSina;
 				PRODUCT_NAME = MarsLogger;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
