@@ -756,6 +756,64 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
 	}
 }
 
+- (void)saveVideoToAlbum {
+    // Save to the album, see
+    // https://stackoverflow.com/questions/33500266/how-to-use-phphotolibrary-like-alassetslibrary
+    __block PHObjectPlaceholder *placeholder;
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        PHAssetChangeRequest* createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:_recordingURL];
+        placeholder = [createAssetRequest placeholderForCreatedAsset];
+    } completionHandler:^(BOOL success, NSError *error) {
+        [[NSFileManager defaultManager] removeItemAtURL:self->_recordingURL error:NULL];
+        
+        @synchronized( self )
+        {
+            if ( self->_recordingStatus != RosyWriterRecordingStatusStoppingRecording ) {
+                @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Expected to be in StoppingRecording state" userInfo:nil];
+                return;
+            }
+            [self transitionToRecordingStatus:RosyWriterRecordingStatusIdle error:error];
+        }
+        if (success) {
+            NSLog(@"didFinishRecordingToOutputFileAtURL - success!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+// see answer by Just Shadow at
+// https://stackoverflow.com/questions/26595343/determine-if-the-access-to-photo-library-is-set-or-not-phphotolibrary/38395022#38395022
+- (void)requestAuthorizationWithRedirectionToSettings {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+        if (status == PHAuthorizationStatusAuthorized) {
+            [self saveVideoToAlbum];
+        } else {
+            //No permission. Trying to normally request it
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                if (status != PHAuthorizationStatusAuthorized)
+                {
+                    //User don't give us permission. Showing alert with redirection to settings
+                    //Getting description string from info.plist file
+                    NSString *accessDescription = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSPhotoLibraryUsageDescription"];
+                    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:accessDescription message:@"To give permissions tap on 'Change Settings' button" preferredStyle:UIAlertControllerStyleAlert];
+
+                    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+                    [alertController addAction:cancelAction];
+
+                    UIAlertAction *settingsAction = [UIAlertAction actionWithTitle:@"Change Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+                    }];
+                    [alertController addAction:settingsAction];
+
+                    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+                }
+            }];
+        }
+    });
+}
+
 - (void)movieRecorderDidFinishRecording:(MovieRecorder *)recorder
 {
 	@synchronized( self )
@@ -774,31 +832,8 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
     NSMutableArray *savedExposureDurations = _recorder.savedExposureDurations;
 	_recorder = nil;
     
-    // Save to the album, see
-    // https://stackoverflow.com/questions/33500266/how-to-use-phphotolibrary-like-alassetslibrary
-    __block PHObjectPlaceholder *placeholder;
-    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        PHAssetChangeRequest* createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:_recordingURL];
-        placeholder = [createAssetRequest placeholderForCreatedAsset];
-        
-    } completionHandler:^(BOOL success, NSError *error) {
-        [[NSFileManager defaultManager] removeItemAtURL:self->_recordingURL error:NULL];
-        
-        @synchronized( self )
-        {
-            if ( self->_recordingStatus != RosyWriterRecordingStatusStoppingRecording ) {
-                @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Expected to be in StoppingRecording state" userInfo:nil];
-                return;
-            }
-            [self transitionToRecordingStatus:RosyWriterRecordingStatusIdle error:error];
-        }
-        if (success) {
-            NSLog(@"didFinishRecordingToOutputFileAtURL - success!");
-        } else {
-            NSLog(@"%@", error);
-        }
-    }];
-    
+    [self requestAuthorizationWithRedirectionToSettings];
+
     // TODO(jhuai): save the video to the document directory in the app sandbox, see
     // https://stackoverflow.com/questions/6916305/how-to-save-video-file-into-document-directory
     // TODO(jhuai): set portraint for iphone and landscape for iPad, see
