@@ -761,7 +761,7 @@ NSString *const IMU_OUTPUT_FILENAME = @"gyro_accel.csv";
     // https://stackoverflow.com/questions/33500266/how-to-use-phphotolibrary-like-alassetslibrary
     __block PHObjectPlaceholder *placeholder;
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        PHAssetChangeRequest* createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:_recordingURL];
+        PHAssetChangeRequest* createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:self->_recordingURL];
         placeholder = [createAssetRequest placeholderForCreatedAsset];
     } completionHandler:^(BOOL success, NSError *error) {
         [[NSFileManager defaultManager] removeItemAtURL:self->_recordingURL error:NULL];
