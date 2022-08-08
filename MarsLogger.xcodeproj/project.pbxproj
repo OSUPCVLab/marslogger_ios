@@ -812,7 +812,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CIFILTER_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilterSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilter;
 				PRODUCT_NAME = MarsLoggerCIFilter;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -835,7 +835,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CIFILTER_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilterSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCIFilter;
 				PRODUCT_NAME = MarsLoggerCIFilter;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -858,7 +858,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPUSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPU;
 				PRODUCT_NAME = MarsLoggerCPU;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -881,7 +881,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_CPU_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPUSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerCPU;
 				PRODUCT_NAME = MarsLoggerCPU;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -909,7 +909,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_OPENCV_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCVSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCV;
 				PRODUCT_NAME = MarsLoggerOpenCV;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -937,7 +937,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DUSE_OPENCV_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCVSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerOpenCV;
 				PRODUCT_NAME = MarsLoggerOpenCV;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1063,9 +1063,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLogger;
 				PRODUCT_NAME = MarsLogger;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1085,9 +1085,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLoggerSina;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLogger;
 				PRODUCT_NAME = MarsLogger;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
