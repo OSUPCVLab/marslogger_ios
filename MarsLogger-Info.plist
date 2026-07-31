@@ -27,9 +27,11 @@
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>MarsLogger records camera frames and ARKit tracking data.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string></string>
+	<key>NSMotionUsageDescription</key>
+	<string>MarsLogger records synchronized device motion for research captures.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save Video to the Photos Album</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -38,8 +40,6 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>video-camera</string>
