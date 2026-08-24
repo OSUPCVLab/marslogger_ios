@@ -476,6 +476,7 @@
 				114C9235C6055AF47C8E4F72 /* CaptureSchemaTests.swift */,
 			);
 			name = ModernSwift;
+			path = ModernSwift;
 			sourceTree = "<group>";
 		};
 		F3FA8C4D23A39F57006CEF03 /* MarsLoggerTests */ = {

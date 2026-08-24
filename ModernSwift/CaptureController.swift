@@ -14,6 +14,16 @@ final class CaptureController: NSObject, ObservableObject, ARSessionDelegate {
     @Published private(set) var errorMessage: String?
 
     private let captureQueue = DispatchQueue(label: "edu.osu.marslogger.capture", qos: .userInitiated)
+    // Core Motion delivers on an OperationQueue; ARKit's delegateQueue is a
+    // DispatchQueue. The two are not interchangeable, so this is a second queue
+    // rather than a cast. Serial, to keep samples in the order they arrive.
+    private let motionQueue: OperationQueue = {
+        let queue = OperationQueue()
+        queue.name = "edu.osu.marslogger.motion"
+        queue.qualityOfService = .userInitiated
+        queue.maxConcurrentOperationCount = 1
+        return queue
+    }()
     private let motion = CMMotionManager()
     private var writer: CaptureWriter?
 
@@ -92,18 +102,25 @@ final class CaptureController: NSObject, ObservableObject, ARSessionDelegate {
     private func startMotionUpdates() {
         guard motion.isDeviceMotionAvailable else { return }
         motion.deviceMotionUpdateInterval = 1.0 / 100.0
-        motion.startDeviceMotionUpdates(to: captureQueue) { [weak self] sample, error in
+        motion.startDeviceMotionUpdates(to: motionQueue) { [weak self] sample, error in
             guard let self else { return }
             if let error {
                 self.publish { self.errorMessage = error.localizedDescription }
                 return
             }
-            guard let sample, let writer = self.writer else { return }
-            do {
-                try writer.append(motion: sample)
-                self.publish { self.motionCount += 1 }
-            } catch {
-                self.publish { self.errorMessage = error.localizedDescription }
+            guard let sample else { return }
+            // Hand the sample back to captureQueue before touching the writer.
+            // ARKit frames are already written there, and the writer is only
+            // safe because that queue serialises it; appending from the motion
+            // queue would race the frame writes.
+            self.captureQueue.async {
+                guard let writer = self.writer else { return }
+                do {
+                    try writer.append(motion: sample)
+                    self.publish { self.motionCount += 1 }
+                } catch {
+                    self.publish { self.errorMessage = error.localizedDescription }
+                }
             }
         }
     }
