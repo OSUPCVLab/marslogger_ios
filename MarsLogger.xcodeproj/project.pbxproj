@@ -57,6 +57,8 @@
 		262F9EBA19A7CA8D001BB393 /* myFilter.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 262F9EB619A7CA8D001BB393 /* myFilter.vsh */; };
 		281FB47F176694640071511D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281FB47D176694640071511D /* Main.storyboard */; };
 		28365599139FE71B00D09100 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28365598139FE71B00D09100 /* ReadMe.txt */; };
+		50A86FED367F84054919F4A0 /* CaptureWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7363F24E9EC981B7F2A36 /* CaptureWriter.swift */; };
+		51C48FE24246EDB45B05B07A /* CaptureSchemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9235C6055AF47C8E4F72 /* CaptureSchemaTests.swift */; };
 		5DBA2A9919C232E200530F7A /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBA2A9719C232E200530F7A /* Launch.storyboard */; };
 		5DBA2A9A19C232E200530F7A /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBA2A9719C232E200530F7A /* Launch.storyboard */; };
 		696D280B19CA539900A23D81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DDE51395CAAA00125BDA /* main.m */; };
@@ -88,29 +90,21 @@
 		6F90DDDC1395CAAA00125BDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDDB1395CAAA00125BDA /* Foundation.framework */; };
 		6F90DDDE1395CAAA00125BDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDDD1395CAAA00125BDA /* CoreGraphics.framework */; };
 		6F90DDE41395CAAA00125BDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F90DDE21395CAAA00125BDA /* InfoPlist.strings */; };
-		6F90DDE61395CAAA00125BDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DDE51395CAAA00125BDA /* main.m */; };
-		6F90DDEA1395CAAA00125BDA /* RosyWriterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DDE91395CAAA00125BDA /* RosyWriterAppDelegate.m */; };
 		6F90DDEC1395CAAA00125BDA /* RosyWriterViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 6F90DDEB1395CAAA00125BDA /* RosyWriterViewController.h */; };
-		6F90DDEE1395CAAA00125BDA /* RosyWriterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DDED1395CAAA00125BDA /* RosyWriterViewController.m */; };
 		6F90DDFF1395CCB600125BDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DDFE1395CCB600125BDA /* AVFoundation.framework */; };
 		6F90DE011395CCBE00125BDA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE001395CCBE00125BDA /* AssetsLibrary.framework */; };
 		6F90DE051395CCD100125BDA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE041395CCD100125BDA /* OpenGLES.framework */; };
 		6F90DE071395CCE000125BDA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE061395CCE000125BDA /* CoreVideo.framework */; };
 		6F90DE091395CCEA00125BDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE081395CCEA00125BDA /* QuartzCore.framework */; };
 		6F90DE0B1395CCF500125BDA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE0A1395CCF500125BDA /* CoreMedia.framework */; };
-		6F90DE141395CD9C00125BDA /* RosyWriterCapturePipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F90DE0F1395CD9C00125BDA /* RosyWriterCapturePipeline.m */; };
-		6FE5A735160BAC8000F6DB2B /* RosyWriterOpenGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5A734160BAC8000F6DB2B /* RosyWriterOpenGLRenderer.m */; };
-		6FF11C8E16A8779D00E14D71 /* MovieRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C8A16A8779D00E14D71 /* MovieRecorder.m */; };
-		6FF11C8F16A8779D00E14D71 /* OpenGLPixelBufferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C8C16A8779D00E14D71 /* OpenGLPixelBufferView.m */; };
-		6FF11C9516A877B100E14D71 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C9116A877B100E14D71 /* matrix.c */; };
-		6FF11C9616A877B100E14D71 /* ShaderUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11C9316A877B100E14D71 /* ShaderUtilities.c */; };
 		7214DBCE182AEF8900EA3F99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7214DBCD182AEF8900EA3F99 /* Images.xcassets */; };
+		726E1EFB320E097DB00DDAE8 /* CaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B87CCA0E01CDE9BF373932 /* CaptureController.swift */; };
+		8017246E46EF0911A753ABD6 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF45774702503AF5EE3DB32 /* ARKit.framework */; };
+		8F6B93038989B13A0D795573 /* MarsLoggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76DDD65FCA7ED0BAD156B7 /* MarsLoggerApp.swift */; };
+		DF273A7D8F6043A559FE801B /* LoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BDE76CA7B9C23065C953E /* LoggerView.swift */; };
 		F318DFE920E738C000260914 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318DFE820E738C000260914 /* Photos.framework */; };
-		F318E01320E78D2800260914 /* InertialRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F318E01120E78D2700260914 /* InertialRecorder.m */; };
 		F318E01420E79AE300260914 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269351C0156CB42100512474 /* CoreMotion.framework */; };
 		F318E01620E79B5E00260914 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E01520E79B5E00260914 /* MessageUI.framework */; };
-		F36A3A7D20D7F18600AA1C57 /* RosyWriterViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F36A3A7C20D7F18600AA1C57 /* RosyWriterViewController+Helper.m */; };
-		F3A7D427235C141E001EE9C3 /* CameraControlFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A7D426235C141E001EE9C3 /* CameraControlFunctions.m */; };
 		F3A7D428235C141E001EE9C3 /* CameraControlFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A7D426235C141E001EE9C3 /* CameraControlFunctions.m */; };
 		F3A7D429235C141E001EE9C3 /* CameraControlFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A7D426235C141E001EE9C3 /* CameraControlFunctions.m */; };
 		F3A7D42A235C141E001EE9C3 /* CameraControlFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A7D426235C141E001EE9C3 /* CameraControlFunctions.m */; };
@@ -128,7 +122,6 @@
 		F3C1A8DD22945F9200A59A8E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C1A8DC22945F9200A59A8E /* opencv2.framework */; };
 		F3C1DB562296E1540060170F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F90DE001395CCBE00125BDA /* AssetsLibrary.framework */; };
 		F3C1DB572296E1B40060170F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318E01520E79B5E00260914 /* MessageUI.framework */; };
-		F3C8A226219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
 		F3C8A227219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
 		F3C8A228219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
 		F3C8A229219122600087B5C3 /* VideoTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8A224219122600087B5C3 /* VideoTimeConverter.m */; };
@@ -136,6 +129,7 @@
 		F3CDB8C723D56CF600799F34 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318DFE820E738C000260914 /* Photos.framework */; };
 		F3CDB8C823D56D0000799F34 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F318DFE820E738C000260914 /* Photos.framework */; };
 		F3FA8C4F23A39F57006CEF03 /* MarsLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA8C4E23A39F57006CEF03 /* MarsLoggerTests.m */; };
+		FA1CB4DC391A1E68E4012EF8 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FC3E3896A6CAD6A8A3D0AE /* SceneKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,10 +143,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		114C9235C6055AF47C8E4F72 /* CaptureSchemaTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CaptureSchemaTests.swift; sourceTree = "<group>"; };
 		171999D919C7695800A719B5 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		1756C9D319BE5E080080DD55 /* RosyWriterCIFilterRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RosyWriterCIFilterRenderer.m; sourceTree = "<group>"; };
 		1756C9F919BE5E1F0080DD55 /* MarsLoggerCIFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsLoggerCIFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1756C9FB19BE5ECE0080DD55 /* RosyWriterCIFilterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosyWriterCIFilterRenderer.h; sourceTree = "<group>"; };
+		17B87CCA0E01CDE9BF373932 /* CaptureController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CaptureController.swift; sourceTree = "<group>"; };
+		183BDE76CA7B9C23065C953E /* LoggerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoggerView.swift; sourceTree = "<group>"; };
 		1FCCE62F19B92B1B009D7A6B /* RosyWriterOpenCVRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RosyWriterOpenCVRenderer.h; sourceTree = "<group>"; };
 		1FCCE63019B92B1B009D7A6B /* RosyWriterOpenCVRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RosyWriterOpenCVRenderer.mm; sourceTree = "<group>"; };
 		1FCCE66D19BA80A5009D7A6B /* MarsLoggerCPU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsLoggerCPU.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +193,10 @@
 		6FF11C9316A877B100E14D71 /* ShaderUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; name = ShaderUtilities.c; path = Utilities/GL/ShaderUtilities.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		6FF11C9416A877B100E14D71 /* ShaderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ShaderUtilities.h; path = Utilities/GL/ShaderUtilities.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7214DBCD182AEF8900EA3F99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		8BF45774702503AF5EE3DB32 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/ARKit.framework; sourceTree = DEVELOPER_DIR; };
+		B5B7363F24E9EC981B7F2A36 /* CaptureWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CaptureWriter.swift; sourceTree = "<group>"; };
+		C3FC3E3896A6CAD6A8A3D0AE /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/SceneKit.framework; sourceTree = DEVELOPER_DIR; };
+		ED76DDD65FCA7ED0BAD156B7 /* MarsLoggerApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarsLoggerApp.swift; sourceTree = "<group>"; };
 		F318DFE820E738C000260914 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		F318E01120E78D2700260914 /* InertialRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InertialRecorder.m; sourceTree = "<group>"; };
 		F318E01220E78D2800260914 /* InertialRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InertialRecorder.h; sourceTree = "<group>"; };
@@ -295,6 +296,8 @@
 				6F90DDFF1395CCB600125BDA /* AVFoundation.framework in Frameworks */,
 				6F90DDDA1395CAAA00125BDA /* UIKit.framework in Frameworks */,
 				6F90DDDC1395CAAA00125BDA /* Foundation.framework in Frameworks */,
+				8017246E46EF0911A753ABD6 /* ARKit.framework in Frameworks */,
+				FA1CB4DC391A1E68E4012EF8 /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +336,15 @@
 			name = Renderers;
 			sourceTree = "<group>";
 		};
+		632957682528D46E0E5F6730 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8BF45774702503AF5EE3DB32 /* ARKit.framework */,
+				C3FC3E3896A6CAD6A8A3D0AE /* SceneKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		6F90DDCA1395CAAA00125BDA = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +356,7 @@
 				F3FA8C4D23A39F57006CEF03 /* MarsLoggerTests */,
 				6F90DDD81395CAAA00125BDA /* Frameworks */,
 				6F90DDD61395CAAA00125BDA /* Products */,
+				CEFF547C6ED5BF42AFEACEBC /* ModernSwift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -378,6 +391,7 @@
 				6F90DE041395CCD100125BDA /* OpenGLES.framework */,
 				6F90DE081395CCEA00125BDA /* QuartzCore.framework */,
 				6F90DDD91395CAAA00125BDA /* UIKit.framework */,
+				632957682528D46E0E5F6730 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -450,6 +464,19 @@
 			);
 			name = "Other Sources";
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		CEFF547C6ED5BF42AFEACEBC /* ModernSwift */ = {
+			isa = PBXGroup;
+			children = (
+				ED76DDD65FCA7ED0BAD156B7 /* MarsLoggerApp.swift */,
+				183BDE76CA7B9C23065C953E /* LoggerView.swift */,
+				17B87CCA0E01CDE9BF373932 /* CaptureController.swift */,
+				B5B7363F24E9EC981B7F2A36 /* CaptureWriter.swift */,
+				114C9235C6055AF47C8E4F72 /* CaptureSchemaTests.swift */,
+			);
+			name = ModernSwift;
+			path = ModernSwift;
 			sourceTree = "<group>";
 		};
 		F3FA8C4D23A39F57006CEF03 /* MarsLoggerTests */ = {
@@ -733,19 +760,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36A3A7D20D7F18600AA1C57 /* RosyWriterViewController+Helper.m in Sources */,
-				6F90DDE61395CAAA00125BDA /* main.m in Sources */,
-				6F90DDEA1395CAAA00125BDA /* RosyWriterAppDelegate.m in Sources */,
-				6F90DDEE1395CAAA00125BDA /* RosyWriterViewController.m in Sources */,
-				6F90DE141395CD9C00125BDA /* RosyWriterCapturePipeline.m in Sources */,
-				F3A7D427235C141E001EE9C3 /* CameraControlFunctions.m in Sources */,
-				6FE5A735160BAC8000F6DB2B /* RosyWriterOpenGLRenderer.m in Sources */,
-				F318E01320E78D2800260914 /* InertialRecorder.m in Sources */,
-				6FF11C8E16A8779D00E14D71 /* MovieRecorder.m in Sources */,
-				6FF11C8F16A8779D00E14D71 /* OpenGLPixelBufferView.m in Sources */,
-				F3C8A226219122600087B5C3 /* VideoTimeConverter.m in Sources */,
-				6FF11C9516A877B100E14D71 /* matrix.c in Sources */,
-				6FF11C9616A877B100E14D71 /* ShaderUtilities.c in Sources */,
+				8F6B93038989B13A0D795573 /* MarsLoggerApp.swift in Sources */,
+				DF273A7D8F6043A559FE801B /* LoggerView.swift in Sources */,
+				726E1EFB320E097DB00DDAE8 /* CaptureController.swift in Sources */,
+				50A86FED367F84054919F4A0 /* CaptureWriter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3FA8C4F23A39F57006CEF03 /* MarsLoggerTests.m in Sources */,
+				51C48FE24246EDB45B05B07A /* CaptureSchemaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1059,15 +1078,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UU4S8L4KDL;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLogger;
 				PRODUCT_NAME = MarsLogger;
 				PROVISIONING_PROFILE = "";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1081,15 +1100,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UU4S8L4KDL;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MarsLogger-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = "MarsLogger-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				OTHER_CFLAGS = "-DUSE_OPENGL_RENDERER=1";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.osu.pcv.MarsLogger;
 				PRODUCT_NAME = MarsLogger;
 				PROVISIONING_PROFILE = "";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1117,12 +1136,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = MarsLoggerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = osu.MarsLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsLogger.app/MarsLogger";
 			};
@@ -1151,12 +1171,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = MarsLoggerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = osu.MarsLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsLogger.app/MarsLogger";
 			};
