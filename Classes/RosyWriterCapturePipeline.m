@@ -9,7 +9,13 @@
 
 #import "RosyWriterCapturePipeline.h"
 
+// The OpenGL renderer belonged to the MarsLoggerOpenGL target, which is now
+// the SwiftUI/ARKit app and no longer compiles this file. The remaining
+// targets select a different renderer below, so this import is guarded to
+// match the branch that uses it.
+#if USE_OPENGL_RENDERER
 #import "RosyWriterOpenGLRenderer.h"
+#endif
 #import "RosyWriterCPURenderer.h"
 #import "RosyWriterCIFilterRenderer.h"
 #import "RosyWriterOpenCVRenderer.h"
