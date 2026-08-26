@@ -28,6 +28,13 @@ struct LoggerView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
+                Toggle("Lock focus", isOn: Binding(
+                    get: { controller.isFocusLocked },
+                    set: { controller.setFocusLocked($0) }
+                ))
+                .font(.footnote)
+                .padding(.horizontal, 4)
+
                 HStack(spacing: 12) {
                     Button(controller.isRecording ? "Stop" : "Record") {
                         controller.isRecording ? controller.stopRecording() : controller.startRecording()
