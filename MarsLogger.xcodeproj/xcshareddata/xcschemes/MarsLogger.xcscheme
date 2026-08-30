@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6F90DDD41395CAAA00125BDA"
                BuildableName = "MarsLogger.app"
-               BlueprintName = "MarsLoggerOpenGL"
+               BlueprintName = "MarsLogger"
                ReferencedContainer = "container:MarsLogger.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +32,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F90DDD41395CAAA00125BDA"
             BuildableName = "MarsLogger.app"
-            BlueprintName = "MarsLoggerOpenGL"
+            BlueprintName = "MarsLogger"
             ReferencedContainer = "container:MarsLogger.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F90DDD41395CAAA00125BDA"
             BuildableName = "MarsLogger.app"
-            BlueprintName = "MarsLoggerOpenGL"
+            BlueprintName = "MarsLogger"
             ReferencedContainer = "container:MarsLogger.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,7 +82,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F90DDD41395CAAA00125BDA"
             BuildableName = "MarsLogger.app"
-            BlueprintName = "MarsLoggerOpenGL"
+            BlueprintName = "MarsLogger"
             ReferencedContainer = "container:MarsLogger.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
