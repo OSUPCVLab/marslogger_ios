@@ -4,9 +4,9 @@ MARS Logger records synchronized camera, ARKit pose, camera calibration, and
 Core Motion data on an iPhone. The primary `MarsLogger` target is now a native
 SwiftUI application built around one authoritative `ARSession`.
 
-The original Objective-C RosyWriter sources and alternate render targets remain
-in the repository for reproducibility and comparison. They are no longer the
-source files compiled by the primary target.
+The repository now has one application target: the native Swift/ARKit
+`MarsLogger` app. The retired CPU, Core Image, OpenCV, and Objective-C
+RosyWriter paths are available in repository history if a comparison is needed.
 
 ## What the Swift application records
 
@@ -37,7 +37,7 @@ Requirements:
 - iOS 15 or later
 - A physical ARKit-capable iPhone or iPad
 
-Open `MarsLogger.xcodeproj`, select the `MarsLoggerOpenGL` scheme, choose your
+Open `MarsLogger.xcodeproj`, select the `MarsLogger` scheme, choose your
 development team and a physical device, then run.
 
 1. Grant camera and motion permission.
@@ -62,14 +62,6 @@ development team and a physical device, then run.
 Captures remain in the app's Documents directory until the user exports or
 deletes them. The application contains no account, analytics, network upload,
 or background transmission path.
-
-## Legacy implementation
-
-The `Classes/`, `Resources/`, and `main.m` paths contain the historical
-Objective-C implementation derived from Apple's RosyWriter sample. The CPU,
-Core Image, and OpenCV schemes remain legacy comparison targets. New work should
-target the Swift `MarsLoggerOpenGL` application unless a maintainer decides to
-remove or consolidate those schemes separately.
 
 ## License
 
